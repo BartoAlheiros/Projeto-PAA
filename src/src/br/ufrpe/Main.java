@@ -8,8 +8,9 @@ public class Main {
             char[] Alfabeto = {'a', 'b', 'c', 'd'};
             char[] Padrao =  {'a', 'a', 'b', 'c', 'c'};
             char[] Texto = {'a', 'a', 'b', 'd', 'd','a', 'a', 'c', 'a', 'a', 'b', 'c', 'c', 'b', 'b', 'a', 'a', 'b', 'a', 'a', 'b', 'c', 'c'};
+            int[] L = new int[Alfabeto.length];
             BoyerMooreMatch bMM = new BoyerMooreMatch();
-            int resultado = bMM.boyerMooreMatch(Alfabeto, Padrao, Texto);
+            int resultado = bMM.boyerMooreMatch(Alfabeto, Padrao, Texto, L);
             /*  exibe o resultado de boyer moore: 
             *   1 - índice em que foi encontrado o padrão
             *   (caso ele foi encontrado);
