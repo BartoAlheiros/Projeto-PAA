@@ -1,41 +1,44 @@
 package src.br.ufrpe;
 
-import java.util.ArrayList;
-
+/**
+ * @author EraNetbook
+ *
+ */
 public class BoyerMooreMatch {
 
     public BoyerMooreMatch() {
         
     }
-
+    
+    /**
+     * @param alfabeto: alfabeto utilizado
+     * @param P: padrão que deseja se identificar no texto
+     * @param T: texto recebido para pesquisar o padrão
+     * @param L: vetor auxiliar que guarda o índice da última posição da letra do alfabeto no padrão.
+     */
     public int boyerMooreMatch(char[] alfabeto, char[] P, char[] T, int[] L) {
-        int k, i = 0, j = 0, l = 0, y = 0;
+        int k, i = 0, j = 0, l = 0;
         //inicia o array L com -1 em todas as posições
         for (k = 0; k < alfabeto.length; k++) {
             L[k] = -1;
         }
         for (k = 0; k < P.length; k++) {
-            //acha a ocorrência mais à direita do elemento do alfabeto no Padrão
+            /**acha a ocorrência mais à direita do elemento do alfabeto no Padrão
+             * e preenche o vetor auxiliar L */
             switch(P[k]) {
                 case 'a': 
-                    L[y] = k;
+                    L[0] = k;
                     break;
                 case 'b':
-                    y = 1;
-                    L[y] = k;
+                    L[1] = k;
                     break;
                 case 'c':
-                    y = 2;
-                    L[y] = k;
+                    L[2] = k;
                     break;
                 case 'd':
-                    y = 3;
-                    L[y] = k;
+                    L[3] = k;
                     break;
             }
-            
-            //a.setL(k, P[k]);
-            //L[P[k]] = k;
         }
         
         i = P.length - 1;
