@@ -1,4 +1,4 @@
-package src.br.ufrpe;
+package br.ufrpe;
 
 /**
  * @author EraNetbook
@@ -63,7 +63,7 @@ public class BoyerMooreMatch {
                     l = L[3];
                     break;
             }
-                //l = a.getTexto(i); //L[T[i]];
+                
                 i += P.length - min(j, l + 1);
                 j = P.length - 1;
             }
