@@ -1,4 +1,4 @@
-package br.ufrpe;
+package src.br.ufrpe;
 
 public class Main {
 
@@ -11,9 +11,12 @@ public class Main {
             char[] Texto2 = {'a', 'a', 'b', 'd', 'c', 'a', 'a', 'b', 'c', 'a', 'b', 'c', 'c', 'b', 'b', 'a', 'a', 'b', 'a', 'a', 'b', 'c', 'c'};
             char[] Padrao2 =  {'a', 'b', 'c', 'a', 'c'};
             
+            char[] Texto3 = {'a', 'a', 'b', 'd', 'c', 'a', 'a', 'b', 'c', 'a', 'b', 'a', 'c', 'a', 'c', 'a', 'a', 'b', 'a', 'a', 'b', 'c', 'c'};
+            char[] Padrao3 =  {'a', 'b', 'c', 'a', 'c'};
+            
             int[] L = new int[Alfabeto.length];
             BoyerMooreMatch bMM = new BoyerMooreMatch();
-            int resultado = bMM.boyerMooreMatch(Alfabeto, Padrao2, Texto2, L);
+            int resultado = bMM.boyerMooreMatch(Alfabeto, Padrao3, Texto3, L);
             /*  exibe o resultado de boyer moore:
             *   1 - índice em que foi encontrado o padrão
             *   (caso ele foi encontrado);

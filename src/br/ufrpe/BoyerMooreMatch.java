@@ -1,4 +1,4 @@
-package br.ufrpe;
+package src.br.ufrpe;
 
 /**
  * @author EraNetbook
